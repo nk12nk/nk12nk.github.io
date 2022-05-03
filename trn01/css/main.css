@@ -6,7 +6,8 @@
 
 .header .top_banner {
     border-bottom: 1px solid #ddd;
-    line-height: 40px; /*문장과 문장띄우기*/
+    line-height: 40px;
+    /*문장과 문장띄우기*/
 }
 
 .header .top_banner span {
@@ -14,39 +15,46 @@
 }
 
 .header .top_banner a {
-    margin: 0 0 0 10px; /* 같은코드 margin-left: 10px; */
-    padding: 0 10px; /* 테두리 */
+    margin: 0 0 0 10px;
+    /* 같은코드 margin-left: 10px; */
+    padding: 0 10px;
+    /* 테두리 */
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
 }
 
 .header .gnb {
-    margin: 0 0 0 auto; /*오른쪽 가운데 정렬*/
+    margin: 0 0 0 auto;
+    /*오른쪽 가운데 정렬*/
 }
 
 .header .gnb>ul {
-    display: flex; /*가로로*/
-    gap: 30px; /*박스 사이사이 띄우기*/
-    line-height: 90px; 
+    display: flex;
+    /*가로로*/
+    gap: 30px;
+    /*박스 사이사이 띄우기*/
+    line-height: 90px;
     font-size: 19px;
     font-weight: 500;
 }
 
 /*메인비주얼*/
 .main_visual {
-    position: relative; /*기준 세우기*/
+    position: relative;
+    /*자기 자신을 기준 세우기*/
     height: 600px;
     background: url(../img/main_slider01.jpg) no-repeat center top/cover;
 }
 
 .main_visual .slogan {
     position: absolute;
+    /*부모(조상)요소을 기준으로*/
     top: 100px;
     right: 600px;
 }
 
 .main_slider {
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -86,3 +94,235 @@
     display: none;
 }
 
+.main_banner {
+    transform: translateY(-50%);
+    /*메인비주얼이랑 겹치게 옮김*/
+}
+
+.main_banner figure {
+    display: flex;
+    flex: 1;
+    /*옛날방식 width: 16.66666666% */
+    text-align: center;
+    /*글자를 가운데 정렬*/
+    color: #fff;
+    justify-content: center;
+    /*안에있는 내용을 가운데로*/
+    align-items: center;
+    /*a박스를 가운데로*/
+    height: 200px;
+}
+
+.main_banner figure:nth-child(1) {
+    background: #e7948f;
+}
+
+.main_banner figure:nth-child(2) {
+    background: #f3ca4f;
+}
+
+.main_banner figure:nth-child(3) {
+    background: #337688;
+}
+
+.main_banner figure:nth-child(4) {
+    background: #6fa376;
+}
+
+.main_banner figure a {
+    display: flex;
+    align-items: flex-end;
+    /*a를 아래쪽으로*/
+    justify-content: center;
+    width: 100px;
+    height: 140px;
+    font-size: 13px;
+}
+
+.main_banner figure:nth-child(1) a {
+    background: url(../img/icon_set_w.png) no-repeat 0 0;
+    transition: 0.5s;
+}
+
+.main_banner figure:nth-child(1):hover a {
+    /*hover 마우스포인터 갖다대면 움직임*/
+    background: url(../img/icon_set_w.png) no-repeat -200px 0;
+}
+
+.main_banner figure:nth-child(2) a {
+    background: url(../img/icon_set_w.png) no-repeat -100px 0;
+    /*이미지를 보이는 박스 안으로 옮김 -100px(왼쪽으로) */
+}
+
+.main_banner figure:nth-child(3) a {
+    background: url(../img/icon_set_w.png) no-repeat -200px 0;
+}
+
+.main_banner figure:nth-child(4) a {
+    background: url(../img/icon_set_w.png) no-repeat -300px 0;
+}
+
+
+.main_banner figure strong {}
+
+.main_banner .customer {
+    position: relative;
+    flex: 2;
+    text-align: right;
+    /*오른쪽 정렬*/
+    background: #dddddd;
+    padding: 50px 30px 0 0;
+
+}
+
+.main_banner .customer a {
+    /*그라데이션넣어봐-숙제 ? background linear-gradient */
+    display: block;
+    margin: 0 0 15px 0;
+    font-size: 38px;
+    color: #369;
+    font-weight: 700;
+}
+
+.main_banner .customer i {
+    position: absolute;
+    top: -29px;
+    right: 30px;
+    color: #fff;
+    background: #e7948f;
+    font-size: 38px;
+    padding: 10px;
+    border-radius: 50%;
+    /*동그랗게*/
+
+}
+
+/*hover시 늘어나는거도 숙제 */
+
+
+.main_link {
+    padding: 0 0 100px 0;
+    background: linear-gradient(to top, #f7f7f7 70%, transparent 30%);
+    /*transparent 투명*/
+}
+
+.main_link h2 {
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.main_link h2::before {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background: #f00;
+    vertical-align: middle;
+    /*줄을 중앙정렬로*/
+    margin: 0 10px 0 0;
+}
+
+.main_link h2::after {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    background: #f00;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.main_link .container {
+    gap: 30px;
+}
+
+.main_link li::before {
+    content: "\ea10";
+    font-family: xeicon !important;
+}
+
+.main_link figure {
+    position: relative;
+    flex: 1;
+    border-radius: 50px 0 0 0;
+    overflow: hidden;
+}
+
+.main_link img {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+.main_link h3 {
+    font-size: 23px;
+    /*이 폰트는 홀수px가 더 예쁨*/
+    margin: 0 0 30px 0;
+}
+
+.main_link h3::after {
+    /*가상공간에 글자줌, 위치: after뒤, before앞, 시각장애인이 읽을때 안읽힘, */
+    content: "";
+    display: block;
+    width: 80px;
+    height: 1px;
+    background: #f00;
+    margin: 15px 0;
+}
+
+.main_link figure a {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: rgba(243, 202, 79, 0.5); /*글자는 선명하게*/
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    border-radius: 50%;
+    /*대문자로 바꿔줌*/
+    text-transform: uppercase;
+    transition: 0.5s;
+    /*opacity: 0.5; 자손들 모두를 투명하게 글자+백그라운드*/
+}
+
+.main_link figure a:hover { /*마우스 포인터 다가가면 색이 바뀜*/
+    background: rgba(243, 202, 79, 1);
+    border-radius: 5px;
+}
+
+.footer {
+    border-top: 1px solid #ddd;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.footer ul {
+    margin: 10px 0;
+}
+
+.footer ul>li {
+    display: inline-block;
+    /*자기자신*/
+}
+
+.footer ul>li~li::before {
+    /* 물결 ~ 맨 앞에있는 자기자신은 빠진다. */
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    background: #333;
+    margin: 0 15px;
+    vertical-align: middle;
+}
+
+/* 맨 앞에있는 li 없애기 
+.footer ul>li:first-child::before { 
+    display: none;
+}*/
+
+
+.footer address {
+    font-style: normal;
+}

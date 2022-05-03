@@ -65,7 +65,9 @@
     font-size: 60px;
     font-weight: 900;
     margin: 0 0 30px 0;
-    color: #00f;
+    background: linear-gradient(to top, #369, #333);
+    color: transparent;
+    -webkit-background-clip: text;
 }
 
 .main_slider strong {
@@ -95,8 +97,13 @@
 }
 
 .main_banner {
-    transform: translateY(-50%);
+    transform: translateY(-80%);
     /*메인비주얼이랑 겹치게 옮김*/
+}
+
+.main_banner .container {
+    height: 220px;
+    align-items: flex-end;
 }
 
 .main_banner figure {
@@ -111,6 +118,12 @@
     align-items: center;
     /*a박스를 가운데로*/
     height: 200px;
+    transition: 0.5s;
+}
+
+
+.main_banner figure:hover {
+    height: 220px;
 }
 
 .main_banner figure:nth-child(1) {
@@ -135,19 +148,16 @@
     /*a를 아래쪽으로*/
     justify-content: center;
     width: 100px;
-    height: 140px;
+    height: 120px;
     font-size: 13px;
 }
 
+
 .main_banner figure:nth-child(1) a {
     background: url(../img/icon_set_w.png) no-repeat 0 0;
-    transition: 0.5s;
+
 }
 
-.main_banner figure:nth-child(1):hover a {
-    /*hover 마우스포인터 갖다대면 움직임*/
-    background: url(../img/icon_set_w.png) no-repeat -200px 0;
-}
 
 .main_banner figure:nth-child(2) a {
     background: url(../img/icon_set_w.png) no-repeat -100px 0;
@@ -163,24 +173,24 @@
 }
 
 
+
 .main_banner figure strong {}
 
 .main_banner .customer {
     position: relative;
     flex: 2;
     text-align: right;
-    /*오른쪽 정렬*/
     background: #dddddd;
-    padding: 50px 30px 0 0;
-
+    padding: 50px 30px 50px 0;
 }
 
 .main_banner .customer a {
-    /*그라데이션넣어봐-숙제 ? background linear-gradient */
     display: block;
     margin: 0 0 15px 0;
     font-size: 38px;
-    color: #369;
+    background: linear-gradient(to right top, rgb(134, 172, 211), rgb(18, 10, 128));
+    color: transparent;
+    -webkit-background-clip: text;
     font-weight: 700;
 }
 
@@ -194,11 +204,7 @@
     padding: 10px;
     border-radius: 50%;
     /*동그랗게*/
-
 }
-
-/*hover시 늘어나는거도 숙제 */
-
 
 .main_link {
     padding: 0 0 100px 0;
@@ -275,7 +281,8 @@
     right: 30px;
     width: 60px;
     height: 60px;
-    background: rgba(243, 202, 79, 0.5); /*글자는 선명하게*/
+    background: rgba(243, 202, 79, 0.5);
+    /*글자는 선명하게*/
     text-align: center;
     line-height: 60px;
     color: #fff;
@@ -286,7 +293,8 @@
     /*opacity: 0.5; 자손들 모두를 투명하게 글자+백그라운드*/
 }
 
-.main_link figure a:hover { /*마우스 포인터 다가가면 색이 바뀜*/
+.main_link figure a:hover {
+    /*마우스 포인터 다가가면 색이 바뀜*/
     background: rgba(243, 202, 79, 1);
     border-radius: 5px;
 }

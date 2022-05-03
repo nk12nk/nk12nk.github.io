@@ -53,6 +53,7 @@
 }
 
 .main_slider {
+    line-height: normal;
     position: absolute;
     top: 50%;
     left: 50%;

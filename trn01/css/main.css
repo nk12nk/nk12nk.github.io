@@ -48,7 +48,6 @@
 
 .main_visual .slogan {
     position: absolute;
-    /*부모(조상)요소을 기준으로*/
     top: 100px;
     right: 600px;
 }
@@ -97,7 +96,7 @@
 }
 
 .main_banner {
-    transform: translateY(-80%);
+    transform: translateY(-50%);
     /*메인비주얼이랑 겹치게 옮김*/
 }
 
@@ -171,8 +170,6 @@
 .main_banner figure:nth-child(4) a {
     background: url(../img/icon_set_w.png) no-repeat -300px 0;
 }
-
-
 
 .main_banner figure strong {}
 

@@ -236,15 +236,17 @@
     margin: 0 10px;
 }
 
-.main_link .container {
-    gap: 30px;
-}
+
 
 .main_link li::before {
     content: "\ea10";
     font-family: xeicon !important;
 }
 */
+
+.main_link .container {
+    gap: 30px;
+}
 
 .main_link figure {
     position: relative;
@@ -438,8 +440,8 @@ responsive 768
         padding: 0 30px;
         text-align: center;
     }
-    
-    /*슬라이더 크기 맞춰주기*/
+
+    /*슬라이더 글자갯수가 달라 박스크기가 제각각임, 박스크기 맞춰주기*/
     .main_slider .itm {
         height: 300px;
     }
@@ -585,7 +587,7 @@ responsive 768
     }
 
     .main_link {
-        padding: 0 0 100px 0;
+        padding: 0 0 10px 0;
         background: linear-gradient(to top, #f7f7f7 70%, transparent 30%);
         /*transparent 투명*/
     }
@@ -632,6 +634,7 @@ responsive 768
     }
 
     .main_link figure {
+        
         position: relative;
         flex: 1;
         border-radius: 50px 0 0 0;

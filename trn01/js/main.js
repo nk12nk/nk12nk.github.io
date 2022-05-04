@@ -9,6 +9,9 @@ $(function () {
         autoplaySeed: 1000,
         vertical: true, 
         dots: true,
-        
     });
+
+    $('.mopen').on('click', function(){
+        $('.gnb').toggleClass('on')
+    })
 })

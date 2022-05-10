@@ -18,12 +18,31 @@ $(function () {
         pauseOnFocus: false,
     });
 
+    $('.movie .dec i:nth-of-type(1)').on('click', function(){
+        $('.movie video').trigger('play');
+    });
 
+    $('.movie .dec i:nth-of-type(2)').on('click', function(){
+        $('.movie video').trigger('pause');
+    });
 
+    $('#myMovie').YTPlayer({
+        videoURL:'https://youtu.be/rd-nlloznQQ',
+        containment:'.utube',
+        autoPlay:true, 
+        mute:false, 
+        startAt:0, 
+        opacity:1,
+        showControls: false,
+        playOnlyIfVisible: true
+    });
 
+    $('.utube i:nth-of-type(1)').on('click', function(){
+        $('#myMovie').YTPPlay();
+    });
 
-
-
-
+    $('.utube i:nth-of-type(2)').on('click', function(){
+        $('#myMovie').YTPPause();
+    });
     ///////////////////////////////////////////////////
 })

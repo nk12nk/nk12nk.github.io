@@ -76,7 +76,7 @@ nav>ul>li~li::before {
     margin: 0 20px;
 }
 
-/*id는 #으로 가져올수 있음*/
+/*id는 #으로 가져올수 있음, class는 .으로 가져오기*/
 #searchForm input[type='text'] {
     border: none;
     border-bottom: 1px solid #ddd;
@@ -171,6 +171,7 @@ nav>ul>li~li::before {
     opacity: 1;
     transition: 0.5s 0.5s;
 }
+
 .main_visual figure a {
     transform: translateY(100px);
     opacity: 0;
@@ -204,14 +205,156 @@ nav>ul>li~li::before {
     width: 0;
     height: 100%;
     background: #f00;
+
 }
 
 .main_visual .slick-dots li.slick-active::after {
     width: 100%;
     transition: 3s;
-
 }
 
 .main_visual .slick-dots button {
     display: none;
 }
+
+.basic {
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* float 방법 = 구식임. dtainer=container
+.dtainer {width: 1230px;margin: 0 auto;}
+.dtainer::after {content: "";display: block;clear: both;}
+.dtainer figure {float: left;width: 33.3333333%;padding: 0 15px;}
+.dtainer figure img {max-width: 100%;}
+*/
+
+.basic .container {
+    gap: 30px;
+}
+
+section h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.basic figure {
+    flex: 1;
+    overflow: hidden;
+}
+
+.basic figure .inbox {
+    overflow: hidden;
+    border-radius:62% 38% 55% 45% / 68% 53% 47% 32% ;
+    transition: 0.5s 0.5s;
+    margin-bottom: 30px;
+}
+
+.basic figure:hover .inbox {
+    border-radius: 10px;
+}
+
+.basic figure img {
+    transition: 0.5s;
+}
+
+
+.basic figure:hover img {
+    transform: scale(1.25);
+}
+
+.basic figure strong {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.basic figure a {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 5px 20px 10px 20px;
+}
+
+.fixed_bg {
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual03.jpg) no-repeat fixed center center/cover;
+    filter: grayscale(0.75);
+    /* background-attachment: fixed; */
+}
+
+.fixed_bg i {
+    padding: 10px;
+    background: #333;
+    margin: 5px 0 0 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.fixed_bg span {
+    vertical-align: middle;
+}
+
+.movie {
+    padding: 100px 0;
+}
+
+.movie .container {
+    gap: 50px;
+}
+
+/*컨테이너 안에있는 자식 모두들*/
+.movie .container figure {
+    flex: 1;
+}
+
+.movie .container .dec {
+    flex: 1;
+    padding: 100px 0;
+}
+
+.movie video {
+    max-width: 100%;
+}
+
+.movie .dec i {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    margin: 0 5px 0 0;
+}
+
+.utube {
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.utube i {
+    padding: 20px;
+    background: rgb(0, 0, 0, 0.5);
+    margin: 0 2px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

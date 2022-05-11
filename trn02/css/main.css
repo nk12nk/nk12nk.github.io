@@ -55,6 +55,7 @@ body {
     line-height: 100px;
 }
 
+
 .header .gnb nav {
     margin: 0 0 0 auto;
 }
@@ -65,6 +66,7 @@ body {
 
 nav>ul {
     display: flex;
+
 }
 
 nav>ul>li~li::before {
@@ -204,7 +206,7 @@ nav>ul>li~li::before {
     display: block;
     width: 0;
     height: 100%;
-    background: #f00;
+    background: rgb(255, 171, 206);
 
 }
 
@@ -375,10 +377,13 @@ section p {
 
 .product_list .s_left {
     margin: 0 0 0 -650px;
+    border-radius: 50%;
+
 }
 
 .product_list .s_right {
     margin: 0 0 0 650px;
+    border-radius: 50%;
 }
 
 .product_list .slick-dots {
@@ -389,10 +394,10 @@ section p {
 }
 
 .product_list .slick-dots li {
-    width: 10px;
+    width: 13px;
     height: 10px;
+    margin: 0px;
     background: #333;
-    border-radius: 50%;
 }
 
 .product_list .slick-dots li.slick-active {
@@ -410,10 +415,15 @@ section p {
 .product_list figure img {
     padding: 50px 0;
     transition: 0.5s;
+    border-radius: 35%;
+
 }
 
 .product_list figure.slick-center img {
     transform: scale(1.25);
+    border-radius: 50%;
+    transition: 0.5s 0.2s;
+
 }
 
 .product_list small {
@@ -483,7 +493,7 @@ section p {
 }
 
 .tab_content>li dd {
-    display: flex;
+    display: flex;    
     margin: 0 10px;
     justify-content: space-between;
     line-height: 36px;

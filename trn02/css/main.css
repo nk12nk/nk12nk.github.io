@@ -484,6 +484,7 @@ section p {
 
 .tab_content>li dd {
     display: flex;
+    margin: 0 10px;
     justify-content: space-between;
     line-height: 36px;
     border-bottom: 1px solid #ddd;

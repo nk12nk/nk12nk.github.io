@@ -340,7 +340,8 @@ section p {
 
 .utube i {
     padding: 20px;
-    background: rgb(0, 0, 0, 0.5);
+    background: rgb(255, 171, 206, 0.5);
+    border-radius: 50%;
     margin: 0 2px;
     font-size: 25px;
     cursor: pointer;
@@ -418,18 +419,21 @@ section p {
 .product_list small {
     position: relative;
     display: inline-block;
-    border-top: 30px solid #f00;
-    border-right: 30px solid transparent;
-    border-bottom: 30px solid #f00;
-    border-left: 100px solid #f00;
+    top: 12px;
+    border-radius: 10%;
+    border-top: 20px solid rgb(255, 171, 206);
+    border-right: 50px solid rgb(255, 171, 206);
+    border-bottom: 20px solid rgb(255, 171, 206);
+    border-left: 20px solid transparent;
     width: 0;
     height: 0;
 }
 
 .product_list span {
     position: absolute;
-    top: -10px;
-    left: -80px;
+    font-size: 17px;
+    top: -8px;
+    left: 5px;
     color: #fff;
 }
 
@@ -459,7 +463,7 @@ section p {
 }
 
 .tab_link>li.on {
-    background: #f00;
+    background: rgb(255, 171, 206);
 }
 
 .tab_link>li~li {

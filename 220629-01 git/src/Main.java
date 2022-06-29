@@ -6,7 +6,8 @@ public class Main {
 		// 커밋 변경점찍기asdfasfd
 		// 두번째 줄 적음asdfdasf
 		System.out.println("Hello World!");
-
+		System.out.println("Hello World!");
+		System.out.println("Hello World!");
 	}
 
 }
